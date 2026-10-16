@@ -1,0 +1,7 @@
+-r requirements.txt
+pytest>=8.4
+pytest-asyncio>=1.2
+pytest-env>=1.1
+httpx>=0.28
+aiosqlite>=0.21
+ruff>=0.13

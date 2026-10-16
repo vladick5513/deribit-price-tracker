@@ -1,0 +1,24 @@
+[project]
+name = "deribit-price-tracker"
+version = "1.0.0"
+description = "Deribit index price collector + FastAPI read API"
+requires-python = ">=3.12"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]
+env = [
+    "D:DB_HOST=localhost",
+    "D:DB_USER=test",
+    "D:DB_PASS=test",
+    "D:DB_NAME=test",
+    "D:REDIS_HOST=localhost",
+]
